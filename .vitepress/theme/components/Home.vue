@@ -13,18 +13,15 @@ onMounted(async () => {
 <template>
   <section id="hero">
     <h1 class="tagline">
-      The
-      <span class="accent">Progressive</span>
-      <br />JavaScript Framework
+      <span class="accent">简单又好用的</span>
+      <br />通用点餐/零售系统
     </h1>
     <p class="description">
-      An approachable, performant and versatile framework for building web
-      user interfaces.
+      多门店管理/线上订单/远程数据查看/扫码点餐系统的最好方案
     </p>
     <p class="actions">
-      <vue-mastery-modal />
       <a class="get-started" href="/guide/introduction.html">
-        Get Started
+        查看说明文档
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -37,24 +34,15 @@ onMounted(async () => {
           />
         </svg>
       </a>
-      <a class="setup" href="/guide/quick-start.html">Install</a>
     </p>
   </section>
 
   <section id="special-sponsor">
-    <span class="lead">Special Sponsor</span>
-    <template v-if="data && data.special">
-      <template v-for="{ url, img, name, description } of data.special">
-        <a :href="url" target="_blank" rel="sponsored noopener">
-          <picture v-if="img.endsWith('png')">
-            <source type="image/avif" :srcset="`${base}/images/${img.replace(/\.png$/, '.avif')}`" />
-            <img :src="`${base}/images/${img}`" :alt="name" />
-          </picture>
-          <img v-else :src="`${base}/images/${img}`" :alt="name" />
+    <span class="lead">新锐软件开发团队</span>
+        <a href="http://innerken.com" target="_blank" rel="sponsored noopener">
+          <img src="https://innerken.com/logo.png" />
         </a>
-        <span>{{ description }}</span>
-      </template>
-    </template>
+        <span>开发/设计</span>
   </section>
 
   <section id="highlights" class="vt-box-container">
